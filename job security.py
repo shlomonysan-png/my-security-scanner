@@ -1,10 +1,17 @@
 import streamlit as st
 import time
+#פונקציית כפתור בדיקה מחדש
 def clear_text():
     st.session_state["url_input"]=""
-#קוד להפוך את האלגוריתם לממשק בעברית
+#קוד להפוך את האלגוריתם לממשק בעברית והסתרת תפריט גיטהאב והתפריטים למעלה
 st.markdown("""
             <style>
+            /* הסתרת כפתור הגיטהאב והתפריטים למעלה */
+            #MainMenu {visibility:
+        hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+             /* ממשק עברית */
             .stApp {direction: rtl !important;
             text-align: right !important;
             }
