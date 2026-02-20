@@ -25,7 +25,7 @@ st.markdown("""
             unsafe_allow_html=True)
 st.title("ברוכים הבאים לסורק האבטחה")
 url=st.text_input("הזן כתובת לבדיקה", key="url_input").lower()
-if st.button("התחל סריקה"):
+if st.button("התחל סריקה \U0001F50D"):
     if url:
         #משתנה לצורך מחיקת הכיתוב סורק... לאחר הזמן
         status = st.empty()
@@ -34,13 +34,11 @@ if st.button("התחל סריקה"):
         status.empty()
         #st.write("סורק...") זה שורת טעות ניתן למחוק  
         if url.startswith("https"):
-            st.success(".האתר משתמש בפרוטוקול מאובטח")
+            st.success(".האתר משתמש בפרוטוקול מאובטח✅")
         elif url.startswith("http"):
-            st.warning("זהירות! האתר משתמש בפרוטוקול לא מאובטח")
+            st.warning("זהירות! האתר משתמש בפרוטוקול לא מאובטח\u26A0")
         else:
-            st.write(".כתובת לא תקינה או חסרת פרוטוקול")
+            st.write(".כתובת לא תקינה או חסרת פרוטוקול\u274C")
     else:
         st.write("לא הוזנה כתובת לבדיקה")
 st.button("בדוק מחדש",on_click=clear_text)
-
-    
